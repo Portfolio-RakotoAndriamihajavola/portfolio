@@ -1,0 +1,99 @@
+# Portfolio d'un Ingénieur Travaux en Réorientation
+
+Ce projet de portfolio présente le parcours professionnel d'un ancien étudiant alternant en ingénierie travaux souhaitant se réorienter vers le poste d'assistant ingénieur structure. Il met en avant les compétences en modélisation BIM (3D avec Revit, 2D avec AutoCAD, analyse avec Robot Structural Analysis) ainsi que l'expérience en ingénierie travaux (projets de logement et un gros projet d'EHPAD).
+
+## Structure du Projet
+
+```
+portfolio
+├── index.html       # Document HTML principal
+├── css
+│   └── styles.css   # Styles du portfolio
+├── js
+│   └── script.js    # Fonctionnalités JavaScript
+└── README.md        # Documentation du projet
+```
+
+## Instructions d'Installation
+
+1. Clonez le dépôt sur votre machine locale.
+2. Ouvrez le fichier `index.html` dans votre navigateur web pour visualiser le portfolio.
+3. Personnalisez le fichier `css/styles.css` pour modifier l'apparence.
+4. Modifiez le fichier `js/script.js` pour ajouter des fonctionnalités.
+
+## Fonctionnalités
+
+- Design responsive adapté aux différentes tailles d'écran.
+- Éléments interactifs avec JavaScript (défilement fluide).
+- Esthétique moderne et personnalisable.
+- Sections dédiées : À propos, Compétences, Projets, Contact.
+
+## Technologies Utilisées
+
+- HTML5 pour la structure.
+- CSS3 pour le style.
+- JavaScript pour l'interactivité.
+
+## Licence
+
+Ce projet est sous licence MIT. Utilisez-le et modifiez-le librement.
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ingénieur Travaux en Réorientation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portfolio d'un Ingénieur Travaux en Réorientation</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Ancien étudiant alternant en ingénierie travaux, je souhaite me réorienter vers le poste d'assistant ingénieur structure. Mon objectif initial est de devenir BIM modeleur ou BIM coordinateur, en mettant en avant mes compétences en modélisation 3D avec Revit, 2D avec AutoCAD, et en analyse structurelle avec Robot Structural Analysis. J'ai également une solide expérience en ingénierie travaux, avec de nombreux projets de logement et un gros projet d'EHPAD.</p>
+        </section>
+        <section id="skills">
+            <h2>Mes Compétences</h2>
+            <ul>
+                <li>Modélisation 3D avec Revit</li>
+                <li>Dessin 2D avec AutoCAD</li>
+                <li>Analyse structurelle avec Robot Structural Analysis</li>
+                <li>BIM Modeling et Coordination</li>
+                <li>Ingénierie travaux : Projets de logement et EHPAD</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Mes Projets</h2>
+            <div class="project">
+                <h3>Projets de Logement</h3>
+                <p>J'ai participé à de nombreux projets de logement, incluant la conception, la gestion et la supervision des travaux.</p>
+            </div>
+            <div class="project">
+                <h3>Projet EHPAD</h3>
+                <p>Un gros projet d'établissement d'hébergement pour personnes âgées dépendantes (EHPAD), où j'ai contribué à la modélisation BIM, l'analyse structurelle et la coordination des équipes.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email : exemple@email.com</p>
+            <p>LinkedIn : [Votre profil LinkedIn]</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Portfolio Ingénieur Travaux</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

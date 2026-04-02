@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Maixent | BIM & Structure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container header-inner">
+            <div class="header-left">
+                <a href="#" class="logo">=Portfolio<span>.</span></a>
+                <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+            </div>
+            <nav>
+                <ul class="nav-list" id="navList">
+                    <li><a href="#about" data-i18n="nav-about">À propos</a></li>
+                    <li><a href="#formation" data-i18n="nav-formation">Formation</a></li>
+                    <li><a href="#skills" data-i18n="nav-skills">Compétences</a></li>
+                    <li><a href="#certifications" data-i18n="nav-certifications">Certifications</a></li>
+                    <li><a href="#bim" data-i18n="nav-bim">BIM</a></li>
+                    <li><a href="#projects" data-i18n="nav-projects">Projets</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <p class="hero-tag" data-i18n="hero-tag">Réorientation BIM & Etudes structure</p>
+                <h1>Maixent<br><span class="accent">RAKOTO ANDRIAMIHAJAVOLA</span></h1>
+                <p class="hero-sub" data-i18n="hero-sub">Ex-assistant ingénieur travaux &mdash; futur BIM modeleur / coordinateur</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero-btn-projects">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="hero-btn-contact">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-logos">
+                <img src="images/ambrew/logo cesi.png" alt="Logo CESI">
+                <img src="images/ambrew/logo cnam.png" alt="Logo CNAM">
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- A PROPOS -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about-title">À propos de moi</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="badge" data-i18n="about-badge"><i class="fas fa-bullseye"></i> Objectif 2026 : BIM modeleur puis BIM coordinateur</span>
+                        <p data-i18n="about-p1">Après deux années en alternance en tant qu'assistant ingénieur travaux, j'ai acquis une expérience en suivi de chantier et en coordination d'équipes.</p>
+                        <p data-i18n="about-p2">Aujourd'hui, je m'oriente vers un poste en bureau d'études, avec une spécialisation en BIM et en conception technique. Je peux ainsi apporter à un bureau d'études un appui opérationnel dans le traitement et la modélisation des maquettes numériques, la coordination des informations techniques et le suivi de conception sur l'ensemble des corps d'état.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMATION -->
+        <section id="formation" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="formation-title">Parcours de Formation</h2>
+                <div class="formation-grid">
+                    <div class="formation-card">
+                        <div class="formation-logo">
+                            <img src="images/ambrew/logo cesi.png" alt="Logo CESI">
+                        </div>
+                        <h3>CESI</h3>
+                        <p data-i18n="formation-cesi-desc">Formation d'ingénieur de 4 ans dont 2 ans en alternance, en partenariat avec le CNAM.</p>
+                    </div>
+                    <div class="formation-card">
+                        <div class="formation-logo">
+                            <img src="images/ambrew/logo cnam.png" alt="Logo CNAM">
+                        </div>
+                        <h3>CNAM</h3>
+                        <p data-i18n="formation-cnam-desc">Établissement partenaire assurant 50% des enseignements de la formation.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPETENCES -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills-title">Mes Compétences</h2>
+
+                <h3 class="skill-category" data-i18n="skills-cat-software"><i class="fas fa-laptop-code"></i> Logiciels</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fas fa-cube"></i><span data-i18n="skill-revit">Revit (Modélisation 3D)</span></div>
+                    <div class="skill-card"><i class="fas fa-draw-polygon"></i><span data-i18n="skill-autocad">AutoCAD (Dessin 2D)</span></div>
+                    <div class="skill-card"><i class="fas fa-chart-line"></i><span data-i18n="skill-rsa">Robot Structural Analysis</span></div>
+                    <div class="skill-card"><i class="fas fa-project-diagram"></i><span data-i18n="skill-navisworks">Navisworks (détection de clash)</span></div>
+                    <div class="skill-card"><i class="fas fa-thermometer-half"></i><span data-i18n="skill-cypetherm">CYPETHERM</span></div>
+                    <div class="skill-card"><i class="fas fa-file-code"></i><span data-i18n="skill-ifc">IFC Builder</span></div>
+                    <div class="skill-card"><i class="fas fa-file-excel"></i><span data-i18n="skill-excel">Excel</span></div>
+                </div>
+
+                <h3 class="skill-category" data-i18n="skills-cat-engineering"><i class="fas fa-hard-hat"></i> Ingénierie</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fas fa-building"></i><span data-i18n="skill-bim">BIM Modeling & Coordination</span></div>
+                    <div class="skill-card"><i class="fas fa-tools"></i><span data-i18n="skill-travaux">Ingénierie travaux (logement, EHPAD)</span></div>
+                    <div class="skill-card"><i class="fas fa-book"></i><span data-i18n="skill-rdm">RDM & Eurocode</span></div>
+                </div>
+
+                <h3 class="skill-category" data-i18n="skills-cat-soft"><i class="fas fa-users"></i> Soft Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fas fa-comments"></i><span data-i18n="skill-comm">Communication</span></div>
+                    <div class="skill-card"><i class="fas fa-tasks"></i><span data-i18n="skill-gestion">Gestion de projet</span></div>
+                    <div class="skill-card"><i class="fas fa-lightbulb"></i><span data-i18n="skill-auto">Autonomie & Adaptabilité</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="certif-title">Certifications</h2>
+                <div class="certif-list">
+
+                    <div class="certif-block">
+                        <div class="certif-header">
+                            <h3><i class="fas fa-language"></i> TOEIC &mdash; 905 / 990</h3>
+                            <p class="certif-desc" data-i18n="certif-toeic-desc">Score avancé (B2) en anglais professionnel, délivré par ETS Global.</p>
+                        </div>
+                        <div class="certif-diploma-wrap">
+                            <div class="image-group certif-group">
+                                <img src="images/ambrew/toeic result.jpeg" alt="Diplôme TOEIC">
+                            </div>
+                            <p class="gallery-desc" data-i18n="certif-toeic-zoom"><i class="fas fa-search-plus"></i> Cliquez sur le diplôme pour zoomer</p>
+                        </div>
+                    </div>
+
+                    <div class="certif-block">
+                        <div class="certif-header">
+                            <h3><i class="fas fa-graduation-cap"></i> Cambridge B2 First</h3>
+                            <p class="certif-desc" data-i18n="certif-cambridge-desc">Certification en anglais niveau B2, délivrée par Cambridge Assessment English.</p>
+                        </div>
+                        <div class="certif-diploma-wrap">
+                            <div class="certif-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span data-i18n="certif-cambridge-placeholder">Diplôme à venir</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certif-block">
+                        <div class="certif-header">
+                            <h3><i class="fas fa-school"></i> Baccalauréat Général</h3>
+                            <p class="certif-desc" data-i18n="certif-bac-desc">Baccalauréat général, série générale.</p>
+                        </div>
+                        <div class="certif-diploma-wrap">
+                            <div class="image-group certif-group">
+                                <img src="images/ambrew/bac.png" alt="Diplôme Baccalauréat">
+                            </div>
+                            <p class="gallery-desc" data-i18n="certif-bac-zoom"><i class="fas fa-search-plus"></i> Cliquez sur le diplôme pour zoomer</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BIM -->
+        <section id="bim" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="bim-title">Formation BIM</h2>
+                <p class="section-intro" data-i18n="bim-intro">Durant ma scolarité, j'ai acquis une formation complète en BIM, couvrant l'ensemble du processus numérique de la conception à la coordination.</p>
+                <div class="bim-grid">
+                    <div class="bim-card">
+                        <div class="bim-icon"><i class="fas fa-sitemap"></i></div>
+                        <h3 data-i18n="bim-process-title">Processus BIM</h3>
+                        <p data-i18n="bim-process-desc">Compréhension du cycle de vie d'un projet en environnement BIM : niveaux de maturité, LOD, flux de données entre acteurs et interopérabilité des formats (IFC, BCF).</p>
+                    </div>
+                    <div class="bim-card">
+                        <div class="bim-icon"><i class="fas fa-cube"></i></div>
+                        <h3 data-i18n="bim-modeling-title">Modélisation</h3>
+                        <p data-i18n="bim-modeling-desc">Modélisation de maquettes numériques architecture et structure sur Revit. Paramétrage des familles, organisation des niveaux et grilles, gestion des vues et feuilles.</p>
+                    </div>
+                    <div class="bim-card">
+                        <div class="bim-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h3 data-i18n="bim-clash-title">Détection de clashes</h3>
+                        <p data-i18n="bim-clash-desc">Coordination multi-disciplinaire et détection de conflits entre corps d'état via Navisworks. Création de rapports de clashes et priorisation des corrections.</p>
+                    </div>
+                    <div class="bim-card">
+                        <div class="bim-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3 data-i18n="bim-bep-title">Convention BIM &amp; BEP</h3>
+                        <p data-i18n="bim-bep-desc">Rédaction d'un BIM Execution Plan (BEP) fictif dans le cadre du dernier projet au CESI/CNAM, précisant les exigences d'échange, les responsabilités des acteurs et la charte BIM.</p>
+                        <div class="bim-doc-actions">
+                            <button class="btn btn-sm bim-pdf-thumb" data-pdf="document/BIM Executed Plan - Team 4.pdf" data-i18n="bim-view-btn">
+                                <i class="fas fa-eye"></i> Consulter le BEP
+                            </button>
+                            <a href="document/BIM Executed Plan - Team 4.pdf" download class="btn btn-sm btn-outline" data-i18n="bim-download-btn">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETS -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects-title">Mes Projets</h2>
+
+                <h3 class="project-heading" data-i18n="projects-heading-travaux">Projets en tant qu'Assistant Ingénieur Travaux</h3>
+                <p class="section-intro" data-i18n="projects-prefab-note">Sur ces opérations, j'ai fortement développé mes compétences en techniques de construction préfabriquée : prédalles, prémurs (bilame), poutrelles-hourdis et poutres industrielles précontraintes.</p>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence AUTONOMIE</h4>
+                            <span class="project-date" data-i18n="project-autonomie-meta">2023 - 2025 | 49 logements</span>
+                        </div>
+                        <img src="images/ambrew/AUTONOMIE.jpg" alt="Résidence AUTONOMIE" class="project-thumb">
+                        <p data-i18n="project-autonomie-desc">Contrôle qualité et respect des règles de sécurité chantier.</p>
+                        <a href="https://galmam.com/residence-autonomie/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence OLEA</h4>
+                            <span class="project-date" data-i18n="project-olea-meta">2023 - 2024 | 31 logements</span>
+                        </div>
+                        <img src="images/ambrew/olea.jpg" alt="Résidence OLEA" class="project-thumb">
+                        <p data-i18n="project-olea-desc">Contrôle qualité et respect des règles de sécurité chantier. Gestion de la Garantie de Parfait Achèvement (GPA).</p>
+                        <a href="https://galmam.com/residence-olea/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence ELAIA - Bât. A & B</h4>
+                            <span class="project-date" data-i18n="project-elaia-meta">2024 - 2025 | 72 logements</span>
+                        </div>
+                        <img src="images/ambrew/ELAIA.jpg" alt="Résidence ELAIA" class="project-thumb">
+                        <p data-i18n="project-elaia-desc">Contrôle qualité et respect des règles de sécurité chantier. Gestion de fin de chantier jusqu'à la livraison des bâtiments.</p>
+                        <a href="https://galmam.com/residence-elaia-batiments-a-et-b/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence AMBRE</h4>
+                            <span class="project-date" data-i18n="project-ambre-meta">2024 - 2025 | 62 logements</span>
+                        </div>
+                        <img src="images/ambrew/ambre.jpg" alt="Résidence AMBRE" class="project-thumb">
+                        <p data-i18n="project-ambre-desc">Préparation de chantier en collaboration avec l'ingénieur travaux (contraintes RE2020), puis suivi autonome jusqu'à la fin du gros œuvre (repli grue).</p>
+                        <a href="https://galmam.com/residence-ambre/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence Galois - Cité Jardin</h4>
+                            <span class="project-date" data-i18n="project-galois-meta">2024 - 2025 | 30 logements</span>
+                        </div>
+                        <img src="images/ambrew/galois.jpeg" alt="Résidence Galois" class="project-thumb">
+                        <p data-i18n="project-galois-desc">Projet gros œuvre réalisé en autonomie complète, de la préparation de chantier jusqu'à la livraison finale, pour la Cité Jardin.</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>EHPAD Hameau du Millénaire</h4>
+                            <span class="project-date" data-i18n="project-ehpad-meta">2024 - 2025 | 81 lits</span>
+                        </div>
+                        <img src="images/ambrew/ehpad.jpg" alt="EHPAD Hameau du Millénaire" class="project-thumb">
+                        <p data-i18n="project-ehpad-desc">Fin de chantier gérée en autonomie sur un projet d'envergure à délai court, en coordination avec les corps d'état.</p>
+                        <a href="https://galmam.com/ehpad-hameau-du-millenaire/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <h3 class="project-heading" data-i18n="projects-heading-perso">Projets Personnels – Auto-didacte</h3>
+                <div class="project-showcase">
+                    <div class="project-card project-card-full">
+                        <div class="project-top">
+                            <h4>Recréation du projet Résidence AMBRE</h4>
+                        </div>
+                        <p data-i18n="project-ambre-perso-desc">Ce projet représente le dernier suivi complet du gros œuvre que j'ai réalisé en tant qu'assistant ingénieur travaux. J'ai intégré le modèle analytique sur Robot Structural Analysis pour me familiariser avec la structure et préparer les analyses à venir.</p>
+
+                        <div class="gallery-section">
+                            <h5 data-i18n="gallery-archi-title"><i class="fas fa-drafting-compass"></i> Maquette architecture</h5>
+                            <div class="image-grid">
+                                <div class="image-group"><img src="images/ambrew/archi-1.png" alt="Maquette architecture 1"></div>
+                                <div class="image-group"><img src="images/ambrew/archi-2.png" alt="Maquette architecture 2"></div>
+                                <div class="image-group"><img src="images/ambrew/archi-3.png" alt="Maquette architecture 3"></div>
+                                <div class="image-group"><img src="images/ambrew/vue-elevations-ambre 1.png" alt="Vue elevations Ambre 1"></div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-section">
+                            <h5 data-i18n="gallery-structure-title"><i class="fas fa-cubes"></i> Maquette structure - Modèle physique</h5>
+                            <div class="image-grid">
+                                <div class="image-group"><img src="images/ambrew/physique-1.jpg.png" alt="Structure physique 1"></div>
+                                <div class="image-group"><img src="images/ambrew/physique-2.jpg.png" alt="Structure physique 2"></div>
+                                <div class="image-group"><img src="images/ambrew/physique-3.jpg.png" alt="Structure physique 3"></div>
+                            </div>
+                            <p class="gallery-desc" data-i18n="gallery-structure-desc">Recréation de la maquette numérique structure de Ambre 1 avec ses caractéristiques (voiles béton, poutres, poteaux, ouvertures).</p>
+                        </div>
+
+                        <div class="gallery-section">
+                            <h5 data-i18n="gallery-analytique-title"><i class="fas fa-vector-square"></i> Modèle analytique</h5>
+                            <div class="image-grid">
+                                <div class="image-group"><img src="images/ambrew/analytique-1.jpg.png" alt="Analytique 1"></div>
+                                <div class="image-group"><img src="images/ambrew/analytique-2.jpg.png" alt="Analytique 2"></div>
+                                <div class="image-group"><img src="images/ambrew/analytique-3.jpg.png" alt="Analytique 3"></div>
+                            </div>
+                            <p class="gallery-desc" data-i18n="gallery-analytique-desc">Conversion du modèle physique en analytique via script Dynamo, application de charges sur Revit.</p>
+                        </div>
+
+                        <div class="gallery-section">
+                            <h5 data-i18n="gallery-rsa-title"><i class="fas fa-cogs"></i> Intégration Robot Structural Analysis</h5>
+                            <div class="image-grid">
+                                <div class="image-group"><img src="images/ambrew/rsa-1.jpg.png" alt="RSA 1"></div>
+                                <div class="image-group"><img src="images/ambrew/rsa-2.jpg.png" alt="RSA 2"></div>
+                            </div>
+                            <p class="gallery-desc" data-i18n="gallery-rsa-desc">Intégration du modèle analytique sur RSA depuis Revit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact-title">Contact</h2>
+                <div class="contact-grid">
+                    <a href="mailto:tm.rakotoandriamihajavola@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <span>tm.rakotoandriamihajavola@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rakotomaixent/" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        <span data-i18n="contact-linkedin">Profil LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-inner">
+            <p data-i18n="footer-text">&copy; 2025 Maixent Rakotoandriamihajavola &mdash; Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="image-lightbox-overlay" id="imageLightbox">
+        <span class="image-lightbox-close" id="imageLightboxClose">&times;</span>
+        <img src="" alt="Zoom" id="imageLightboxContent">
+        <iframe src="" id="pdfLightboxContent" style="display:none;width:90%;height:90%;border:none;"></iframe>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>
