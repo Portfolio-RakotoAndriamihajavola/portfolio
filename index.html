@@ -1,464 +1,356 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BOBER Team Hub - Valorant</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Rajdhani:wght@500;700&family=Teko:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Maixent | BIM & Structure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div class="bg-shape shape-a"></div>
-  <div class="bg-shape shape-b"></div>
 
-  <div class="top-strip">
-    <div class="top-strip-inner">
-      <div class="top-left">
-        <div class="strip-brand-wrap">
-          <img src="Logo bober.png" alt="Logo BOBER WIPR" class="strip-logo">
-          <p class="strip-brand">BOBER #WIPR</p>
-        </div>
-        <nav class="strip-choices" aria-label="Navigation principale">
-          <button class="tab active" data-tab="strategies">Strategies</button>
-          <button class="tab" data-tab="team">Team</button>
-          <button class="tab" data-tab="matches">Matchs</button>
-          <details class="menu-dropdown" id="mapMenu">
-            <summary id="mapMenuLabel">Map : Lotus</summary>
-            <div class="menu-list" role="menu" aria-label="Selection map">
-              <button type="button" class="menu-item" data-map-select="haven"><img class="menu-thumb" src="Haven.webp" alt="Haven"><span>Haven</span></button>
-              <button type="button" class="menu-item" data-map-select="fracture"><img class="menu-thumb" src="Fracture.webp" alt="Fracture"><span>Fracture</span></button>
-              <button type="button" class="menu-item active" data-map-select="lotus"><img class="menu-thumb" src="Lotus.webp" alt="Lotus"><span>Lotus</span></button>
-              <button type="button" class="menu-item" data-map-select="split"><img class="menu-thumb" src="Split.webp" alt="Split"><span>Split</span></button>
-              <button type="button" class="menu-item" data-map-select="bind"><img class="menu-thumb" src="Bind.webp" alt="Bind"><span>Bind</span></button>
-              <button type="button" class="menu-item" data-map-select="breeze"><img class="menu-thumb" src="Breeze.webp" alt="Breeze"><span>Breeze</span></button>
-              <button type="button" class="menu-item" data-map-select="abyss"><img class="menu-thumb" src="Abyss.webp" alt="Abyss"><span>Abyss</span></button>
-              <button type="button" class="menu-item" data-map-select="ascent"><img class="menu-thumb" src="Ascent.webp" alt="Ascent"><span>Ascent</span></button>
-              <button type="button" class="menu-item" data-map-select="icebox"><img class="menu-thumb" src="Icebox.webp" alt="Icebox"><span>Icebox</span></button>
-              <button type="button" class="menu-item" data-map-select="pearl"><img class="menu-thumb" src="Pearl.webp" alt="Pearl"><span>Pearl</span></button>
-              <button type="button" class="menu-item" data-map-select="sunset"><img class="menu-thumb" src="Sunset.webp" alt="Sunset"><span>Sunset</span></button>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container header-inner">
+            <div class="header-left">
+                <a href="#" class="logo">=Portfolio<span>.</span></a>
+                <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
             </div>
-          </details>
-        </nav>
-      </div>
-      <div class="top-right">
-        <input type="search" id="topSearch" placeholder="Recherche séquence">
-        <details class="auth-gate" id="authGate">
-          <summary class="secondary-btn">Connexion</summary>
-          <div class="auth-panel">
-            <p id="topAuthState" class="muted">Non connecté</p>
-
-            <div class="player-box" id="playerBox">
-              <h4>Portail de connexion</h4>
-              <p class="muted">Un seul portail pour joueurs et admin.</p>
-
-              <form id="playerLoginForm" class="form-grid player-form">
-                <input type="text" id="playerLoginUsername" placeholder="Pseudo" required>
-                <input type="password" id="playerLoginPassword" placeholder="Mot de passe" required>
-                <button type="submit">Connexion</button>
-              </form>
-
-              <form id="playerResetForm" class="form-grid player-form hidden">
-                <p id="playerResetHint" class="muted">Premiere connexion detectee. Redefinis ton mot de passe.</p>
-                <input type="password" id="playerResetPassword" placeholder="Nouveau mot de passe" required>
-                <input type="password" id="playerResetPasswordConfirm" placeholder="Confirmer le nouveau mot de passe" required>
-                <button type="submit">Valider le nouveau mot de passe</button>
-              </form>
-
-              <div id="playerConnected" class="player-connected hidden">
-                <span id="playerStatus" class="muted"></span>
-                <button type="button" id="playerLogout" class="secondary-btn">Déconnexion</button>
-              </div>
-            </div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </div>
-
-  <section id="siteLockBanner" class="site-lock hidden" aria-live="polite">
-    <h2>Acces reserve aux membres connectes</h2>
-    <p>Connectez-vous pour afficher les strategies, le roster et les informations de match.</p>
-    <button type="button" id="openAuthGateBtn" class="secondary-btn">Ouvrir la connexion</button>
-  </section>
-
-  <header class="hero">
-    <div class="hero-brand">
-      <div>
-        <h1>Playbook Team</h1>
-        <p class="subtitle">Séquences officielles et REX par map.</p>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="strategies" class="tab-panel active" aria-live="polite">
-      <div class="section-head">
-        <h2 id="stratTitle">Séquences - Lotus</h2>
-        <div class="strat-head-row">
-          <p>Vue claire des séquences attaque/défense. Les séquences sont faites pour s'enchaîner dans l'ordre.</p>
-          <a class="secondary-btn pdf-download-btn" href="LOTUS%20BOBER%20GUIDE.pdf" download="LOTUS BOBER GUIDE.pdf">Telecharger le guide PDF Lotus Bober</a>
+            <nav>
+                <ul class="nav-list" id="navList">
+                    <li><a href="#about" data-i18n="nav-about">À propos</a></li>
+                    <li><a href="#formation" data-i18n="nav-formation">Formation</a></li>
+                    <li><a href="#skills" data-i18n="nav-skills">Compétences</a></li>
+                    <li><a href="#certifications" data-i18n="nav-certifications">Certifications</a></li>
+                    <li><a href="#bim" data-i18n="nav-bim">BIM</a></li>
+                    <li><a href="#projects" data-i18n="nav-projects">Projets</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <article class="map-showcase" id="mapShowcase">
-        <div class="map-media-wrap">
-          <img id="mapPreviewImage" src="Lotus.webp" alt="Aperçu de la map Lotus" class="map-media">
-          <div class="map-overlay">
-            <p class="map-label">Map Focus</p>
-            <h3 id="mapPreviewTitle">Lotus</h3>
-            <p id="mapPreviewSubtitle">Contrôle des timings de rotation et prises en deux temps.</p>
-          </div>
-        </div>
-      </article>
-
-      <div class="pill-row" id="stratFilter">
-        <button class="pill active" data-filter="attack">Attack</button>
-        <button class="pill" data-filter="defense">Defense</button>
-      </div>
-
-      <div class="strat-grid" id="stratGrid">
-        <article class="strat-card" data-map="lotus" data-type="attack">
-          <div class="flow-images">
-            <img src="HIT A - 1.png" alt="Lotus Hit A 1">
-            <div class="flow-arrow-wrap" aria-hidden="true">
-              <span class="flow-arrow-shape"></span>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <p class="hero-tag" data-i18n="hero-tag">Réorientation BIM & Etudes structure</p>
+                <h1>Maixent<br><span class="accent">RAKOTO ANDRIAMIHAJAVOLA</span></h1>
+                <p class="hero-sub" data-i18n="hero-sub">Ex-assistant ingénieur travaux &mdash; futur BIM modeleur / coordinateur</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero-btn-projects">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="hero-btn-contact">Me contacter</a>
+                </div>
             </div>
-            <img src="HIT A - 2.png" alt="Lotus Hit A 2">
-          </div>
-          <div class="card-info">
-            <h3>Quand est-ce que l'on hit A ?</h3>
-            <p class="arrow-line">Open kill sur le fight main (+ avantage numérique = freeze)</p>
-            <p class="arrow-line">Danger aperçu en C</p>
-            <p class="arrow-line">Défense passive sur site</p>
-          </div>
-        </article>
-
-        <article class="strat-card" data-map="lotus" data-type="attack">
-          <img src="HIT B - 1.png" alt="Lotus Hit B 1" class="hit-b-image">
-          <div class="card-info">
-            <h3>Quand est-ce que l'on hit B ?</h3>
-            <p class="arrow-line">Sentinelle sur un des 2 sites</p>
-            <p class="arrow-line">Kill hobbit</p>
-            <p class="arrow-line">Manque de temps</p>
-          </div>
-        </article>
-
-        <article class="strat-card" data-map="lotus" data-type="attack">
-          <div class="flow-images flow-with-note">
-            <img src="HIT C - 1.png" alt="Lotus Fast C 1">
-            <div class="flow-mid-note">
-              <div class="flow-arrow-wrap" aria-hidden="true">
-                <span class="flow-arrow-shape"></span>
-              </div>
-              <p class="flow-comment">KJ reste main pour punir ceux qui traversent au bruit de la porte</p>
+            <div class="hero-logos">
+                <img src="images/ambrew/logo cesi.png" alt="Logo CESI">
+                <img src="images/ambrew/logo cnam.png" alt="Logo CNAM">
             </div>
-            <img src="HIT C - 2.png" alt="Lotus Fast C 2">
-          </div>
-          <div class="card-info">
-            <h3>Quand est-ce que l'on hit C ?</h3>
-            <p class="arrow-line">Au pistol round</p>
-            <p class="arrow-line">Si on arrive à faire reculer Chamber</p>
-          </div>
-        </article>
-
-        <article class="strat-card" data-map="lotus" data-type="defense">
-          <img src="Defense A.png" alt="Defense Lotus Start">
-          <div class="card-info">
-            <h3>Setup fort en A</h3>
-          </div>
-        </article>
-
-        <article class="strat-card" data-map="lotus" data-type="defense">
-          <img src="Defense C.png" alt="Defense Lotus C">
-          <div class="card-info">
-            <h3>Setup fort en C</h3>
-          </div>
-        </article>
-      </div>
-
-      <div id="defensePrinciples" class="card-box defense-principles hidden">
-        <h3>Principes défense Lotus</h3>
-        <p class="defense-title">On joue les espaces de la map diagonalement et non horizontalement, comme sur Pearl.</p>
-        <div class="principles-list">
-          <p class="arrow-line">On doit être soit fort en A, soit fort en C, et toujours neutre en B.</p>
-          <p class="arrow-line">Rotation rapide sur les informations, puis dépôt d'un joueur dans la zone pour garder l'information d'une rotation tardive.</p>
         </div>
-      </div>
-
-      <p id="emptyState" class="empty-state hidden">Pas encore de contenu pour cette map.</p>
-
-      <div class="card-box rex-inline">
-        <h3 id="commentMapTitle">REX - Lotus</h3>
-        <p class="muted">Commentaires liés à la map actuellement sélectionnée.</p>
-
-        <form id="commentForm" class="form-grid">
-          <input type="text" id="commentAuthor" placeholder="Pseudo" required>
-          <input type="text" id="commentMatch" placeholder="Match (ex: BOBER vs TEAMX - 13-9)" required>
-          <textarea id="commentText" rows="4" placeholder="Votre retour d'expérience..." required></textarea>
-          <button type="submit">Publier le commentaire</button>
-        </form>
-        <ul id="commentList" class="comment-list"></ul>
-      </div>
     </section>
 
-    <section id="team" class="tab-panel" aria-live="polite">
-      <div class="section-head">
-        <h2>Team</h2>
-        <p>Présentation rapide du roster et des rôles principaux.</p>
-      </div>
+    <main>
 
-      <div class="team-layout">
-        <article class="card-box team-intro">
-          <h3>BOBER #WIPR</h3>
-          <p>
-            On joue autour d'une identité simple: discipline, timing et communication propre.
-            Clique sur un profil pour voir ses agents de confort et son histoire en rapide.
-          </p>
-        </article>
-
-        <div class="team-grid" id="teamGrid">
-          <button type="button" class="team-profile active" data-profile="bobe">
-            <span class="profile-badge">BO</span>
-            <span class="profile-name">BOBE</span>
-            <span class="profile-role">Propriétaire / Flex initiateur smokeur</span>
-          </button>
-
-          <button type="button" class="team-profile" data-profile="limulesama">
-            <span class="profile-badge"><img class="profile-photo" src="pdp_limule.jpg" alt="Photo de profil Limulesama"></span>
-            <span class="profile-name">Limulesama</span>
-            <span class="profile-role">Capitaine / Dueliste</span>
-          </button>
-
-          <button type="button" class="team-profile" data-profile="h1mmel">
-            <span class="profile-badge"><img class="profile-photo" src="pdp_h1mmel.png" alt="Photo de profil h1mmel"></span>
-            <span class="profile-name">h1mmel</span>
-            <span class="profile-role">IGL / Flex smokeur sentinel</span>
-          </button>
-
-          <button type="button" class="team-profile" data-profile="quentin">
-            <span class="profile-badge">QU</span>
-            <span class="profile-name">Quentin</span>
-            <span class="profile-role">Shot caller / Flex initiateur smoker</span>
-          </button>
-
-          <button type="button" class="team-profile" data-profile="warinen">
-            <span class="profile-badge"><img class="profile-photo" src="pdp_warinen.jpg" alt="Photo de profil Warinen"></span>
-            <span class="profile-name">Warinen</span>
-            <span class="profile-role">Flex initiateur smoker</span>
-          </button>
-
-          <button type="button" class="team-profile" data-profile="pinelancien">
-            <span class="profile-badge">PA</span>
-            <span class="profile-name">Pinelancien</span>
-            <span class="profile-role">Flex initiateur smokeur / Sentinel</span>
-          </button>
-
-          <button type="button" class="team-profile" data-profile="korraze">
-            <span class="profile-badge"><img class="profile-photo" src="pdp_korrazé.webp" alt="Photo de profil kørraZé"></span>
-            <span class="profile-name">kørraZé</span>
-            <span class="profile-role">Flex dueliste smokeur</span>
-          </button>
-        </div>
-
-        <article class="card-box team-detail" id="teamDetail">
-          <h3 id="teamDetailName">BOBE</h3>
-          <p id="teamDetailRole" class="muted">Propriétaire / Flex initiateur smokeur</p>
-          <p id="teamDetailStory">
-            Propriétaire du projet, il cadre la vision d'équipe et assure la stabilité du roster.
-          </p>
-          <div>
-            <h4>Agents</h4>
-            <ul id="teamDetailAgents" class="team-agents"></ul>
-          </div>
-          <div class="team-tier-dnd" id="teamTierDnd">
-            <h4>Aperçu drag and drop</h4>
-            <div class="tier-grid">
-              <div class="tier-column">
-                <p class="tier-title">Pool</p>
-                <ul id="tierPool" class="team-tier-drop" data-tier="pool"></ul>
-              </div>
-              <div class="tier-column">
-                <p class="tier-title">Very comfortable</p>
-                <ul id="tierVeryComfortable" class="team-tier-drop" data-tier="very-comfortable"></ul>
-              </div>
-              <div class="tier-column">
-                <p class="tier-title">Comfortable</p>
-                <ul id="tierComfortable" class="team-tier-drop" data-tier="comfortable"></ul>
-              </div>
-              <div class="tier-column">
-                <p class="tier-title">Playable</p>
-                <ul id="tierPlayable" class="team-tier-drop" data-tier="playable"></ul>
-              </div>
-              <div class="tier-column">
-                <p class="tier-title">Not comfortable</p>
-                <ul id="tierNotComfortable" class="team-tier-drop" data-tier="not-comfortable"></ul>
-              </div>
-              <div class="tier-column">
-                <p class="tier-title">Helle nah</p>
-                <ul id="tierHelleNah" class="team-tier-drop" data-tier="helle-nah"></ul>
-              </div>
+        <!-- A PROPOS -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about-title">À propos de moi</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="badge" data-i18n="about-badge"><i class="fas fa-bullseye"></i> Objectif 2026 : BIM modeleur puis BIM coordinateur</span>
+                        <p data-i18n="about-p1">Après deux années en alternance en tant qu'assistant ingénieur travaux, j'ai acquis une expérience en suivi de chantier et en coordination d'équipes.</p>
+                        <p data-i18n="about-p2">Aujourd'hui, je m'oriente vers un poste en bureau d'études, avec une spécialisation en BIM et en conception technique. Je peux ainsi apporter à un bureau d'études un appui opérationnel dans le traitement et la modélisation des maquettes numériques, la coordination des informations techniques et le suivi de conception sur l'ensemble des corps d'état.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div id="teamTierWrap" class="team-tier-wrap hidden">
-            <h4>Tier list agents (image)</h4>
-            <img id="teamTierImage" class="team-tier-image" src="" alt="Tier list agents du joueur sélectionné">
-          </div>
-        </article>
-      </div>
-    </section>
+        </section>
 
-    <section id="matches" class="tab-panel" aria-live="polite">
-      <div class="section-head">
-        <h2>Matchs</h2>
-        <a class="tracker-link" href="https://tracker.gg/valorant/premier/teams/c61a628f-25ff-478a-9a01-30d1d4bd6359" target="_blank" rel="noopener noreferrer">Voir les matches de l'equipe sur Tracker</a>
-        <p>Suivi des matchs joués et des dates à venir.</p>
-      </div>
+        <!-- FORMATION -->
+        <section id="formation" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="formation-title">Parcours de Formation</h2>
+                <div class="formation-grid">
+                    <div class="formation-card">
+                        <div class="formation-logo">
+                            <img src="images/ambrew/logo cesi.png" alt="Logo CESI">
+                        </div>
+                        <h3>CESI</h3>
+                        <p data-i18n="formation-cesi-desc">Formation d'ingénieur de 4 ans dont 2 ans en alternance, en partenariat avec le CNAM.</p>
+                    </div>
+                    <div class="formation-card">
+                        <div class="formation-logo">
+                            <img src="images/ambrew/logo cnam.png" alt="Logo CNAM">
+                        </div>
+                        <h3>CNAM</h3>
+                        <p data-i18n="formation-cnam-desc">Établissement partenaire assurant 50% des enseignements de la formation.</p>
+                    </div>
 
-      <div class="match-layout">
-        <div class="card-box">
-          <h3>Calendrier jusqu'au 26 avril</h3>
-          <ul class="weekly-calendar">
-            <li class="completed">
-              <strong>Mercredi 18 mars</strong>
-              <span>19h - prac</span>
-            </li>
-            <li class="completed">
-              <strong>Jeudi 19 mars</strong>
-              <span>19h - offi</span>
-            </li>
-            <li class="completed">
-              <strong>Vendredi 20 mars</strong>
-              <span>20h - prac</span>
-            </li>
-            <li class="completed">
-              <strong>Samedi 21 mars</strong>
-              <span>20h - offi</span>
-            </li>
-            <li class="completed">
-              <strong>Dimanche 22 mars</strong>
-              <span>19h - offi</span>
-            </li>
-            <li class="completed">
-              <strong>Mercredi 25 mars</strong>
-              <span>19h - prac</span>
-            </li>
-            <li class="completed">
-              <strong>Jeudi 26 mars</strong>
-              <span>19h - offi</span>
-            </li>
-            <li class="completed">
-              <strong>Vendredi 27 mars</strong>
-              <span>20h - prac</span>
-            </li>
-            <li class="completed">
-              <strong>Samedi 28 mars</strong>
-              <span>20h - offi</span>
-            </li>
-            <li class="completed">
-              <strong>Dimanche 29 mars</strong>
-              <span>19h - offi</span>
-            </li>
-            <li class="completed">
-              <strong>Mercredi 1 avril</strong>
-              <span>19h - prac</span>
-            </li>
-            <li class="completed">
-              <strong>Jeudi 2 avril</strong>
-              <span>19h - offi</span>
-            </li>
-            <li class="completed">
-              <strong>Vendredi 3 avril</strong>
-              <span>20h - prac</span>
-            </li>
-            <li class="completed">
-              <strong>Samedi 4 avril</strong>
-              <span>20h - offi</span>
-            </li>
-            <li>
-              <strong>Dimanche 5 avril</strong>
-              <span>19h - offi</span>
-            </li>
-            <li>
-              <strong>Mercredi 8 avril</strong>
-              <span>19h - prac</span>
-            </li>
-            <li>
-              <strong>Jeudi 9 avril</strong>
-              <span>19h - offi</span>
-            </li>
-            <li>
-              <strong>Vendredi 10 avril</strong>
-              <span>20h - prac</span>
-            </li>
-            <li>
-              <strong>Samedi 11 avril</strong>
-              <span>20h - offi</span>
-            </li>
-            <li>
-              <strong>Dimanche 12 avril</strong>
-              <span>19h - offi</span>
-            </li>
-            <li>
-              <strong>Mercredi 15 avril</strong>
-              <span>19h - prac</span>
-            </li>
-            <li>
-              <strong>Jeudi 16 avril</strong>
-              <span>19h - offi</span>
-            </li>
-            <li>
-              <strong>Vendredi 17 avril</strong>
-              <span>20h - prac</span>
-            </li>
-            <li>
-              <strong>Samedi 18 avril</strong>
-              <span>20h - offi</span>
-            </li>
-            <li>
-              <strong>Dimanche 19 avril</strong>
-              <span>19h - offi</span>
-            </li>
-            <li>
-              <strong>Mercredi 22 avril</strong>
-              <span>19h - prac</span>
-            </li>
-            <li>
-              <strong>Jeudi 23 avril</strong>
-              <span>19h - offi</span>
-            </li>
-            <li>
-              <strong>Vendredi 24 avril</strong>
-              <span>20h - prac</span>
-            </li>
-            <li>
-              <strong>Samedi 25 avril</strong>
-              <span>20h - offi</span>
-            </li>
-            <li>
-              <strong>Dimanche 26 avril</strong>
-              <span>19h - tournoi Up and Down</span>
-            </li>
-          </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPETENCES -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills-title">Mes Compétences</h2>
+
+                <h3 class="skill-category" data-i18n="skills-cat-software"><i class="fas fa-laptop-code"></i> Logiciels</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fas fa-cube"></i><span data-i18n="skill-revit">Revit (Modélisation 3D)</span></div>
+                    <div class="skill-card"><i class="fas fa-draw-polygon"></i><span data-i18n="skill-autocad">AutoCAD (Dessin 2D)</span></div>
+                    <div class="skill-card"><i class="fas fa-chart-line"></i><span data-i18n="skill-rsa">Robot Structural Analysis</span></div>
+                    <div class="skill-card"><i class="fas fa-project-diagram"></i><span data-i18n="skill-navisworks">Navisworks (détection de clash)</span></div>
+                    <div class="skill-card"><i class="fas fa-thermometer-half"></i><span data-i18n="skill-cypetherm">CYPETHERM</span></div>
+                    <div class="skill-card"><i class="fas fa-file-code"></i><span data-i18n="skill-ifc">IFC Builder</span></div>
+                    <div class="skill-card"><i class="fas fa-file-excel"></i><span data-i18n="skill-excel">Excel</span></div>
+                </div>
+
+                <h3 class="skill-category" data-i18n="skills-cat-engineering"><i class="fas fa-hard-hat"></i> Ingénierie</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fas fa-building"></i><span data-i18n="skill-bim">BIM Modeling & Coordination</span></div>
+                    <div class="skill-card"><i class="fas fa-tools"></i><span data-i18n="skill-travaux">Ingénierie travaux (logement, EHPAD)</span></div>
+                    <div class="skill-card"><i class="fas fa-book"></i><span data-i18n="skill-rdm">RDM & Eurocode</span></div>
+                </div>
+
+                <h3 class="skill-category" data-i18n="skills-cat-soft"><i class="fas fa-users"></i> Soft Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><i class="fas fa-comments"></i><span data-i18n="skill-comm">Communication</span></div>
+                    <div class="skill-card"><i class="fas fa-tasks"></i><span data-i18n="skill-gestion">Gestion de projet</span></div>
+                    <div class="skill-card"><i class="fas fa-lightbulb"></i><span data-i18n="skill-auto">Autonomie & Adaptabilité</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="certif-title">Certifications</h2>
+                <div class="certif-list">
+
+                    <div class="certif-block">
+                        <div class="certif-header">
+                            <h3><i class="fas fa-language"></i> TOEIC &mdash; 905 / 990</h3>
+                            <p class="certif-desc" data-i18n="certif-toeic-desc">Score avancé (B2) en anglais professionnel, délivré par ETS Global.</p>
+                        </div>
+                        <div class="certif-diploma-wrap">
+                            <div class="image-group certif-group">
+                                <img src="images/ambrew/toeic result.jpeg" alt="Diplôme TOEIC">
+                            </div>
+                            <p class="gallery-desc" data-i18n="certif-toeic-zoom"><i class="fas fa-search-plus"></i> Cliquez sur le diplôme pour zoomer</p>
+                        </div>
+                    </div>
+
+                    <div class="certif-block">
+                        <div class="certif-header">
+                            <h3><i class="fas fa-school"></i> Baccalauréat Général</h3>
+                            <p class="certif-desc" data-i18n="certif-bac-desc">Baccalauréat général, série générale.</p>
+                        </div>
+                        <div class="certif-diploma-wrap">
+                            <div class="image-group certif-group">
+                                <img src="images/ambrew/bac.png" alt="Diplôme Baccalauréat">
+                            </div>
+                            <p class="gallery-desc" data-i18n="certif-bac-zoom"><i class="fas fa-search-plus"></i> Cliquez sur le diplôme pour zoomer</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BIM -->
+        <section id="bim" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="bim-title">Formation BIM</h2>
+                <p class="section-intro" data-i18n="bim-intro">Durant ma scolarité, j'ai acquis une formation complète en BIM, couvrant l'ensemble du processus numérique de la conception à la coordination.</p>
+                <div class="bim-grid">
+                    <div class="bim-card">
+                        <div class="bim-icon"><i class="fas fa-sitemap"></i></div>
+                        <h3 data-i18n="bim-process-title">Processus BIM</h3>
+                        <p data-i18n="bim-process-desc">Compréhension du cycle de vie d'un projet en environnement BIM : niveaux de maturité, LOD, flux de données entre acteurs et interopérabilité des formats (IFC, BCF).</p>
+                    </div>
+                    <div class="bim-card">
+                        <div class="bim-icon"><i class="fas fa-cube"></i></div>
+                        <h3 data-i18n="bim-modeling-title">Modélisation</h3>
+                        <p data-i18n="bim-modeling-desc">Modélisation de maquettes numériques architecture et structure sur Revit. Paramétrage des familles, organisation des niveaux et grilles, gestion des vues et feuilles.</p>
+                    </div>
+                    <div class="bim-card">
+                        <div class="bim-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h3 data-i18n="bim-clash-title">Détection de clashes</h3>
+                        <p data-i18n="bim-clash-desc">Coordination multi-disciplinaire et détection de conflits entre corps d'état via Navisworks. Création de rapports de clashes et priorisation des corrections.</p>
+                    </div>
+                    <div class="bim-card">
+                        <div class="bim-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3 data-i18n="bim-bep-title">Convention BIM &amp; BEP</h3>
+                        <p data-i18n="bim-bep-desc">Rédaction d'un BIM Execution Plan (BEP) fictif dans le cadre du dernier projet au CESI/CNAM, précisant les exigences d'échange, les responsabilités des acteurs et la charte BIM.</p>
+                        <div class="bim-doc-actions">
+                            <button class="btn btn-sm bim-pdf-thumb" data-pdf="document/BIM Executed Plan - Team 4.pdf" data-i18n="bim-view-btn">
+                                <i class="fas fa-eye"></i> Consulter le BEP
+                            </button>
+                            <a href="document/BIM Executed Plan - Team 4.pdf" download class="btn btn-sm btn-outline" data-i18n="bim-download-btn">
+                                <i class="fas fa-download"></i> Télécharger
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETS -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects-title">Mes Projets</h2>
+
+                <h3 class="project-heading" data-i18n="projects-heading-travaux">Projets en tant qu'Assistant Ingénieur Travaux</h3>
+                <p class="section-intro" data-i18n="projects-prefab-note">Sur ces opérations, j'ai fortement développé mes compétences en techniques de construction préfabriquée : prédalles, prémurs (bilame), poutrelles-hourdis et poutres industrielles précontraintes.</p>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence AUTONOMIE</h4>
+                            <span class="project-date" data-i18n="project-autonomie-meta">2023 - 2025 | 49 logements</span>
+                        </div>
+                        <img src="images/ambrew/AUTONOMIE.jpg" alt="Résidence AUTONOMIE" class="project-thumb">
+                        <p data-i18n="project-autonomie-desc">Contrôle qualité et respect des règles de sécurité chantier.</p>
+                        <a href="https://galmam.com/residence-autonomie/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence OLEA</h4>
+                            <span class="project-date" data-i18n="project-olea-meta">2023 - 2024 | 31 logements</span>
+                        </div>
+                        <img src="images/ambrew/olea.jpg" alt="Résidence OLEA" class="project-thumb">
+                        <p data-i18n="project-olea-desc">Contrôle qualité et respect des règles de sécurité chantier. Gestion de la Garantie de Parfait Achèvement (GPA).</p>
+                        <a href="https://galmam.com/residence-olea/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence ELAIA - Bât. A & B</h4>
+                            <span class="project-date" data-i18n="project-elaia-meta">2024 - 2025 | 72 logements</span>
+                        </div>
+                        <img src="images/ambrew/ELAIA.jpg" alt="Résidence ELAIA" class="project-thumb">
+                        <p data-i18n="project-elaia-desc">Contrôle qualité et respect des règles de sécurité chantier. Gestion de fin de chantier jusqu'à la livraison des bâtiments.</p>
+                        <a href="https://galmam.com/residence-elaia-batiments-a-et-b/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence AMBRE</h4>
+                            <span class="project-date" data-i18n="project-ambre-meta">2024 - 2025 | 62 logements</span>
+                        </div>
+                        <img src="images/ambrew/ambre.jpg" alt="Résidence AMBRE" class="project-thumb">
+                        <p data-i18n="project-ambre-desc">Préparation de chantier en collaboration avec l'ingénieur travaux (contraintes RE2020), puis suivi autonome jusqu'à la fin du gros œuvre (repli grue).</p>
+                        <a href="https://galmam.com/residence-ambre/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>Résidence Galois - Cité Jardin</h4>
+                            <span class="project-date" data-i18n="project-galois-meta">2024 - 2025 | 30 logements</span>
+                        </div>
+                        <img src="images/ambrew/galois.jpeg" alt="Résidence Galois" class="project-thumb">
+                        <p data-i18n="project-galois-desc">Projet gros œuvre réalisé en autonomie complète, de la préparation de chantier jusqu'à la livraison finale, pour la Cité Jardin.</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <h4>EHPAD Hameau du Millénaire</h4>
+                            <span class="project-date" data-i18n="project-ehpad-meta">2024 - 2025 | 81 lits</span>
+                        </div>
+                        <img src="images/ambrew/ehpad.jpg" alt="EHPAD Hameau du Millénaire" class="project-thumb">
+                        <p data-i18n="project-ehpad-desc">Fin de chantier gérée en autonomie sur un projet d'envergure à délai court, en coordination avec les corps d'état.</p>
+                        <a href="https://galmam.com/ehpad-hameau-du-millenaire/" target="_blank" rel="noopener" class="btn btn-sm" data-i18n="btn-view-project">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <h3 class="project-heading" data-i18n="projects-heading-perso">Projets Personnels – Auto-didacte</h3>
+                <div class="project-showcase">
+                    <div class="project-card project-card-full">
+                        <div class="project-top">
+                            <h4>Recréation du projet Résidence AMBRE</h4>
+                        </div>
+                        <p data-i18n="project-ambre-perso-desc">Ce projet représente le dernier suivi complet du gros œuvre que j'ai réalisé en tant qu'assistant ingénieur travaux. J'ai intégré le modèle analytique sur Robot Structural Analysis pour me familiariser avec la structure et préparer les analyses à venir.</p>
+
+                        <div class="gallery-section">
+                            <h5 data-i18n="gallery-archi-title"><i class="fas fa-drafting-compass"></i> Maquette architecture</h5>
+                            <div class="image-grid">
+                                <div class="image-group"><img src="images/ambrew/archi-1.png" alt="Maquette architecture 1"></div>
+                                <div class="image-group"><img src="images/ambrew/archi-2.png" alt="Maquette architecture 2"></div>
+                                <div class="image-group"><img src="images/ambrew/archi-3.png" alt="Maquette architecture 3"></div>
+                                <div class="image-group"><img src="images/ambrew/vue-elevations-ambre 1.png" alt="Vue elevations Ambre 1"></div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-section">
+                            <h5 data-i18n="gallery-structure-title"><i class="fas fa-cubes"></i> Maquette structure - Modèle physique</h5>
+                            <div class="image-grid">
+                                <div class="image-group"><img src="images/ambrew/physique-1.jpg.png" alt="Structure physique 1"></div>
+                                <div class="image-group"><img src="images/ambrew/physique-2.jpg.png" alt="Structure physique 2"></div>
+                                <div class="image-group"><img src="images/ambrew/physique-3.jpg.png" alt="Structure physique 3"></div>
+                            </div>
+                            <p class="gallery-desc" data-i18n="gallery-structure-desc">Recréation de la maquette numérique structure de Ambre 1 avec ses caractéristiques (voiles béton, poutres, poteaux, ouvertures).</p>
+                        </div>
+
+                        <div class="gallery-section">
+                            <h5 data-i18n="gallery-analytique-title"><i class="fas fa-vector-square"></i> Modèle analytique</h5>
+                            <div class="image-grid">
+                                <div class="image-group"><img src="images/ambrew/analytique-1.jpg.png" alt="Analytique 1"></div>
+                                <div class="image-group"><img src="images/ambrew/analytique-2.jpg.png" alt="Analytique 2"></div>
+                                <div class="image-group"><img src="images/ambrew/analytique-3.jpg.png" alt="Analytique 3"></div>
+                            </div>
+                            <p class="gallery-desc" data-i18n="gallery-analytique-desc">Conversion du modèle physique en analytique via script Dynamo, application de charges sur Revit.</p>
+                        </div>
+
+                        <div class="gallery-section">
+                            <h5 data-i18n="gallery-rsa-title"><i class="fas fa-cogs"></i> Intégration Robot Structural Analysis</h5>
+                            <div class="image-grid">
+                                <div class="image-group"><img src="images/ambrew/rsa-1.jpg.png" alt="RSA 1"></div>
+                                <div class="image-group"><img src="images/ambrew/rsa-2.jpg.png" alt="RSA 2"></div>
+                            </div>
+                            <p class="gallery-desc" data-i18n="gallery-rsa-desc">Intégration du modèle analytique sur RSA depuis Revit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact-title">Contact</h2>
+                <div class="contact-grid">
+                    <a href="mailto:tm.rakotoandriamihajavola@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <span>tm.rakotoandriamihajavola@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rakotomaixent/" class="contact-card" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        <span data-i18n="contact-linkedin">Profil LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-inner">
+            <p data-i18n="footer-text">&copy; 2025 Maixent Rakotoandriamihajavola &mdash; Portfolio</p>
         </div>
-      </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="brand-footer" aria-label="Partenaires univers de jeu">
-    <div class="brand-badges">
-      <img src="logo valorant.png" alt="Logo Valorant" class="brand-logo">
-      <img src="logo riot.png" alt="Logo Riot Games" class="brand-logo riot-wide">
+    <!-- LIGHTBOX -->
+    <div class="image-lightbox-overlay" id="imageLightbox">
+        <span class="image-lightbox-close" id="imageLightboxClose">&times;</span>
+        <img src="" alt="Zoom" id="imageLightboxContent">
+        <iframe src="" id="pdfLightboxContent" style="display:none;width:90%;height:90%;border:none;"></iframe>
     </div>
-  </footer>
 
-  <dialog id="imageModal">
-    <button id="closeModal" class="close-modal" aria-label="Fermer">x</button>
-    <img id="modalImage" src="" alt="Agrandissement de strat">
-    <p id="modalCaption"></p>
-  </dialog>
-
-  <script src="app.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
