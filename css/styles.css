@@ -276,25 +276,81 @@ nav {
     margin-bottom: 16px;
 }
 
-.hero-card-list {
-    list-style: none;
+.hero-card-orgs {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
 }
 
-.hero-card-list li {
+.hero-card-org {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+}
+
+.hero-card-org-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-muted);
+}
+
+/* Logos d'organisation : si l'image ne charge pas, le nom s'affiche à la place */
+.org-logos {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 0.95rem;
-    font-weight: 500;
+    flex-wrap: wrap;
 }
 
-.hero-card-list i {
-    width: 20px;
-    text-align: center;
-    color: var(--purple);
+.org-logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.org-logo img {
+    height: 40px;
+    max-width: 140px;
+    object-fit: contain;
+}
+
+.org-logo-text {
+    display: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text);
+    padding: 6px 12px;
+    border: 1.5px solid var(--text);
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}
+
+.org-logo.is-text .org-logo-text {
+    display: inline-block;
+}
+
+.hero-card .org-logos {
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.hero-card .org-logo img {
+    height: 30px;
+    max-width: 110px;
+}
+
+.hero-card .org-logo-text {
+    font-size: 0.9rem;
+    padding: 4px 10px;
+}
+
+.org-logo-x {
+    color: var(--text-muted);
+    font-size: 1.1rem;
 }
 
 .stats {
@@ -612,6 +668,26 @@ nav {
 
 .formation-logo {
     margin-bottom: 20px;
+}
+
+.formation-logo.org-logos {
+    justify-content: center;
+    min-height: 56px;
+}
+
+.formation-current {
+    position: relative;
+    border-color: rgba(224, 121, 159, 0.5);
+}
+
+.formation-current .timeline-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.timeline-org-logo {
+    margin: 6px 0 12px;
 }
 
 .formation-logo img {
