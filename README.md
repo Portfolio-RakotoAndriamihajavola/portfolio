@@ -1,32 +1,21 @@
-# Portfolio Project
+# Portfolio – Maixent Rakoto Andriamihajavola
 
-This portfolio project showcases my work and skills as a developer. It includes a main HTML document, styles for the webpage, and JavaScript functionality to enhance user interaction.
+Portfolio de BIM Coordinateur (alternance chez Nantes Métropole, formation au GRETA-CFA Montpellier), avec deux ans d'expérience chantier comme assistant ingénieur travaux.
 
-## Project Structure
+## Structure
 
 ```
 portfolio
-├── index.html       # Main HTML document
-├── css
-│   └── styles.css   # Styles for the portfolio
-├── js
-│   └── script.js    # JavaScript functionality
-└── README.md        # Project documentation
+├── index.html        # Page principale
+├── css/styles.css    # Styles
+├── js/script.js      # Menu mobile, défilement, lightbox images/PDF
+├── js/i18n.js        # Traductions FR / EN (clés data-i18n)
+├── images/           # Visuels projets et certifications
+└── document/         # BEP (PDF)
 ```
 
-## Setup Instructions
+## Utilisation
 
-1. Clone the repository to your local machine.
-2. Open the `index.html` file in your web browser to view the portfolio.
-3. Customize the `css/styles.css` file to change the appearance of the portfolio.
-4. Modify the `js/script.js` file to add or update functionality.
+Ouvrir `index.html` dans un navigateur. Aucun build n'est nécessaire.
 
-## Features
-
-- Responsive design that adapts to different screen sizes.
-- Interactive elements powered by JavaScript.
-- Clean and modern aesthetic with customizable styles.
-
-## License
-
-This project is licensed under the MIT License. Feel free to use and modify it as needed.
+Pour modifier un texte, changer à la fois le contenu dans `index.html` (version FR par défaut) et les deux entrées `fr` / `en` correspondantes dans `js/i18n.js`.
