@@ -848,6 +848,18 @@ nav {
     box-shadow: 0 4px 16px var(--yellow-glow);
 }
 
+/* Badge déjà encadré : pas de cadre blanc autour */
+.certif-group-badge img {
+    background: none;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+}
+
+.certif-group-badge img:hover {
+    border: none;
+}
+
 .certif-placeholder {
     display: flex;
     flex-direction: column;
